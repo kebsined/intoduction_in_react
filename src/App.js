@@ -1,27 +1,38 @@
 import logo from './logo.svg';
 import './App.css';
+import { createElement } from 'react';
 
-function App() {
+export default function App() {
 	const date = new Date();
-	return (
-		<div className='App'>
-			<header className='App-header'>
-				<img src={logo} className='App-logo' alt='logo' />
-				<p>
-					Edit <code>src/App.js</code> and save to reload.
-				</p>
-				<a
-					className='App-link'
-					href='https://reactjs.org'
-					target='_blank'
-					rel='noopener noreferrer'
-				>
-					Learn React
-				</a>
-				<p>{date.getFullYear()}</p>
-			</header>
-		</div>
+	return createElement(
+		'div',
+		{ class: 'App', alt: 'logo' },
+		createElement(
+			'header',
+			{ class: 'App-header' },
+			createElement('img', {
+				src: logo,
+				class: 'App-logo',
+				alt: 'logo',
+			}),
+			createElement(
+				'p',
+				{},
+				'Edit',
+				createElement('code', {}, ' src/App.js '),
+				'and save to reload.'
+			),
+			createElement(
+				'a',
+				{
+					class: 'App-link',
+					href: 'https://reactjs.org',
+					target: '_blank',
+					rel: 'noopener noreferrer',
+				},
+				'Learn React'
+			),
+			createElement('p', {}, date.getFullYear())
+		)
 	);
 }
-
-export default App;
