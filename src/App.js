@@ -6,13 +6,13 @@ export default function App() {
 	const date = new Date();
 	return createElement(
 		'div',
-		{ class: 'App', alt: 'logo' },
+		{ className: 'App', alt: 'logo' },
 		createElement(
 			'header',
-			{ class: 'App-header' },
+			{ className: 'App-header' },
 			createElement('img', {
 				src: logo,
-				class: 'App-logo',
+				className: 'App-logo',
 				alt: 'logo',
 			}),
 			createElement(
@@ -25,7 +25,7 @@ export default function App() {
 			createElement(
 				'a',
 				{
-					class: 'App-link',
+					className: 'App-link',
 					href: 'https://reactjs.org',
 					target: '_blank',
 					rel: 'noopener noreferrer',
